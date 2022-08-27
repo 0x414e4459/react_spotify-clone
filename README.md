@@ -1,3 +1,29 @@
+## Notes
+
+### 1.create store
+
+1. use **_configureStore_** from redux-toolkit to create store
+2. wrap **app**component by the **provider** (from 'react-reduc' lib) component that takes _store as prop_ so all the children of App get access to store.
+
+**Creating Slices**  
+**slice:** splittng of redux objects into multiple slices of state.  
+slice is a collection of reducer logic and actions for a single feature in the app.
+
+3.  Crate slice using create/slice from redux-toolkit that takes
+    1.  name
+    2.  intial State
+    3.  reducers
+4.  export slice.reducer to use in store file and add it to reducers object with name:slicename.
+5.  Overview, "provider" provides store to all app children, the store contains all reducers that contains all inital states, reducers,actions.
+6.  In React component import actions,  
+    useSelector: used to select reducername/state,  
+    useDispatch: used to dispatch actions.
+
+### source
+
+https://www.youtube.com/watch?v=NqzdVN2tyvQ&t=0s 34:45
+https://www.youtube.com/watch?v=-JJFQ9bkUbo 9:00
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
